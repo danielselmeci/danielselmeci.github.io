@@ -7,38 +7,51 @@
   <link rel="stylesheet" href="src/styles.css" />
 </head>
 <body>
-  <!-- Header Section -->
-  <header class="header">
-    <div class="logo">Daniel Selmeci Photography</div>
-    <nav class="nav">
-      <a href="#home">Home</a>
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>Daniel Selmeci</h1>
+      <p>Photography & Visual Art</p>
+    </div>
+    <nav class="hero-nav">
       <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
+  </section>
 
-  <!-- Main Section -->
-  <main>
-    <section id="portfolio" class="gallery">
-      <h1>Photography Portfolio</h1>
-      <!-- Filter Buttons -->
-      <div class="categories">
-        <button onclick="filterGallery('all')">All</button>
-        <button onclick="filterGallery('nature')">Nature</button>
-        <button onclick="filterGallery('portraits')">Portraits</button>
-        <button onclick="filterGallery('urban')">Urban</button>
-      </div>
-      <!-- Image Gallery -->
-      <div class="gallery-grid">
-        <img src="src/assets/nature1.jpg" alt="Nature 1" class="gallery-item nature" onclick="openLightbox(this)" />
-        <img src="src/assets/portrait1.jpg" alt="Portrait 1" class="gallery-item portraits" onclick="openLightbox(this)" />
-        <img src="src/assets/urban1.jpg" alt="Urban 1" class="gallery-item urban" onclick="openLightbox(this)" />
-        <img src="src/assets/nature2.jpg" alt="Nature 2" class="gallery-item nature" onclick="openLightbox(this)" />
-        <img src="src/assets/portrait2.jpg" alt="Portrait 2" class="gallery-item portraits" onclick="openLightbox(this)" />
-        <img src="src/assets/urban2.jpg" alt="Urban 2" class="gallery-item urban" onclick="openLightbox(this)" />
-      </div>
-    </section>
-  </main>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="gallery">
+    <h2>Portfolio</h2>
+    <div class="gallery-grid">
+      <!-- Replace these image paths with your actual photos -->
+      <img src="src/assets/nature1.jpg" alt="Nature 1" class="gallery-item" onclick="openLightbox(this)" />
+      <img src="src/assets/portrait1.jpg" alt="Portrait 1" class="gallery-item" onclick="openLightbox(this)" />
+      <img src="src/assets/urban1.jpg" alt="Urban 1" class="gallery-item" onclick="openLightbox(this)" />
+      <img src="src/assets/nature2.jpg" alt="Nature 2" class="gallery-item" onclick="openLightbox(this)" />
+      <img src="src/assets/portrait2.jpg" alt="Portrait 2" class="gallery-item" onclick="openLightbox(this)" />
+      <img src="src/assets/urban2.jpg" alt="Urban 2" class="gallery-item" onclick="openLightbox(this)" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I’m Daniel Selmeci, a passionate photographer with a focus on capturing the beauty of nature, portraits, and urban life. 
+      Let’s create something amazing together.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:danielselmeci@example.com">danielselmeci@example.com</a></p>
+    <div class="social-links">
+      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    </div>
+  </section>
 
   <!-- Lightbox Modal -->
   <div id="lightbox" class="lightbox">
