@@ -1,0 +1,41 @@
+/* File: styles.css */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #000428, #004e92); /* Adaptive Gradient */
+  color: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px); /* Frosted-glass effect */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 10;
+}
+
+.nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.language-selector select {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+main {
+  margin-top: 5rem;
+  text-align: center;
+  padding: 2rem;
+}
