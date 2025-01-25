@@ -1,38 +1,55 @@
-<!-- File: src/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daniel Selmeci Photography</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="src/styles.css" />
 </head>
 <body>
+  <!-- Header Section -->
   <header class="header">
     <div class="logo">Daniel Selmeci Photography</div>
     <nav class="nav">
       <a href="#home">Home</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#contact">Contact</a>
-      <div class="language-selector">
-        <select id="language" onchange="changeLanguage(this.value)">
-          <option value="en">EN</option>
-          <option value="de">DE</option>
-          <option value="hu">HU</option>
-        </select>
-      </div>
     </nav>
   </header>
 
+  <!-- Main Section -->
   <main>
-    <h1>Welcome to My Photography Portfolio</h1>
+    <section id="portfolio" class="gallery">
+      <h1>Photography Portfolio</h1>
+      <!-- Filter Buttons -->
+      <div class="categories">
+        <button onclick="filterGallery('all')">All</button>
+        <button onclick="filterGallery('nature')">Nature</button>
+        <button onclick="filterGallery('portraits')">Portraits</button>
+        <button onclick="filterGallery('urban')">Urban</button>
+      </div>
+      <!-- Image Gallery -->
+      <div class="gallery-grid">
+        <img src="src/assets/nature1.jpg" alt="Nature 1" class="gallery-item nature" onclick="openLightbox(this)" />
+        <img src="src/assets/portrait1.jpg" alt="Portrait 1" class="gallery-item portraits" onclick="openLightbox(this)" />
+        <img src="src/assets/urban1.jpg" alt="Urban 1" class="gallery-item urban" onclick="openLightbox(this)" />
+        <img src="src/assets/nature2.jpg" alt="Nature 2" class="gallery-item nature" onclick="openLightbox(this)" />
+        <img src="src/assets/portrait2.jpg" alt="Portrait 2" class="gallery-item portraits" onclick="openLightbox(this)" />
+        <img src="src/assets/urban2.jpg" alt="Urban 2" class="gallery-item urban" onclick="openLightbox(this)" />
+      </div>
+    </section>
   </main>
 
-  <script>
-    function changeLanguage(lang) {
-      // Redirect to localized page or use i18n framework to update content dynamically.
-      alert('Switching language to: ' + lang);
-    }
-  </script>
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-image" id="lightboxImage" />
+    <div class="lightbox-controls">
+      <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+      <button class="next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <script src="src/script.js"></script>
 </body>
 </html>
