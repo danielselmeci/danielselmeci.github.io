@@ -1,69 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel Selmeci Photography</title>
-  <link rel="stylesheet" href="src/styles.css" />
-</head>
-<body>
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <h1>Daniel Selmeci</h1>
-      <h3>Capturing something beautiful</h3>
-      <p>Street photography, landscape, aero photography, exterior, and interior photography</p>
+import React, { useState } from "react";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import "./styles.css"; // Include a separate CSS file for styling and animations
+
+const PhotographerWebsite = () => {
+  const [hoveredImage, setHoveredImage] = useState(null);
+
+  return (
+    <div className="bg-white text-gray-900 font-sans">
+      {/* Hero Section */}
+      <header
+        className="relative h-screen bg-cover bg-center transition-all duration-700"
+        style={{ backgroundImage: "url('/path-to-hero-image.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div className="relative flex flex-col items-center justify-center h-full text-white text-center">
+          <h1 className="text-6xl font-extrabold animate-fade-in">Capturing the Essence of Moments</h1>
+          <p className="mt-4 text-xl font-light animate-slide-up">A Modern Approach to Timeless Photography</p>
+          <Button className="mt-6 px-8 py-4 text-lg bg-white text-gray-900 rounded-full shadow-lg hover:shadow-xl transition transform hover:scale-105">
+            View Portfolio
+          </Button>
+        </div>
+      </header>
+
+      {/* Navigation */}
+      <nav className="sticky top-0 bg-white shadow-sm z-10">
+        <div className="container mx-auto flex justify-between items-center py-4 px-6">
+          <h2 className="text-3xl font-bold tracking-tight">Photographer</h2>
+          <ul className="flex space-x-8 text-lg">
+            <li><a href="#portfolio" className="hover:underline">Portfolio</a></li>
+            <li><a href="#about" className="hover:underline">About</a></li>
+            <li><a href="#services" className="hover:underline">Services</a></li>
+            <li><a href="#contact" className="hover:underline">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-20 bg-gray-50">
+        <div className="container mx-auto text-center">
+          <h2 className="text-5xl font-extrabold mb-12">Portfolio</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <Card
+                key={i}
+                className="overflow-hidden rounded-lg shadow-md transition-transform transform hover:scale-105"
+                onMouseEnter={() => setHoveredImage(i)}
+                onMouseLeave={() => setHoveredImage(null)}
+              >
+                <img
+                  src={`/path-to-portfolio-image-${i + 1}.jpg`}
+                  alt={`Portfolio ${i + 1}`}
+                  className="w-full h-64 object-cover"
+                />
+                <div className={`p-4 ${hoveredImage === i ? "animate-bounce" : ""}`}>
+                  <h3 className="font-medium text-xl">Photo Title</h3>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 bg-white">
+        <div className="container mx-auto flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
+          <img
+            src="/path-to-profile-picture.jpg"
+            alt="Photographer"
+            className="w-72 h-72 rounded-full shadow-lg object-cover transition-transform transform hover:scale-110"
+          />
+          <div className="max-w-2xl">
+            <h2 className="text-5xl font-extrabold mb-6 animate-slide-up">About Me</h2>
+            <p className="text-lg font-light leading-relaxed">I’m a passionate photographer blending modern aesthetics with timeless techniques to craft visually stunning stories. Let’s create something unforgettable together.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-20 bg-gray-50">
+        <div className="container mx-auto text-center">
+          <h2 className="text-5xl font-extrabold mb-12">Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {['Weddings', 'Portraits', 'Events'].map((service, i) => (
+              <Card
+                key={i}
+                className="shadow-lg p-8 text-center rounded-lg transition-transform transform hover:scale-105"
+              >
+                <h3 className="text-3xl font-semibold mb-4">{service}</h3>
+                <p className="text-gray-600 mb-6">Starting at $500</p>
+                <Button className="px-6 py-3 text-lg rounded-full bg-gray-900 text-white hover:bg-gray-800">
+                  Learn More
+                </Button>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-white">
+        <div className="container mx-auto text-center">
+          <h2 className="text-5xl font-extrabold mb-12">Contact</h2>
+          <form className="max-w-lg mx-auto space-y-6">
+            <Input placeholder="Your Name" className="w-full px-4 py-3 border rounded-lg" />
+            <Input placeholder="Your Email" className="w-full px-4 py-3 border rounded-lg" />
+            <textarea placeholder="Your Message" className="w-full px-4 py-3 border rounded-lg h-32"></textarea>
+            <Button
+              type="submit"
+              className="w-full px-6 py-3 bg-gray-900 text-white text-lg rounded-full shadow-lg hover:bg-gray-800 animate-pulse"
+            >
+              Send Message
+            </Button>
+          </form>
+          <div className="mt-12 flex justify-center space-x-6">
+            {['Instagram', 'Pinterest', 'Twitter'].map((platform) => (
+              <a
+                key={platform}
+                href="#"
+                className="text-gray-500 hover:text-gray-700 text-xl transition-transform transform hover:scale-110"
+              >
+                {platform}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 bg-gray-900 text-white text-center">
+        <p className="text-lg">&copy; 2025 Photographer. All rights reserved.</p>
+      </footer>
     </div>
-    <nav class="hero-nav">
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </section>
+  );
+};
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="gallery">
-    <h2>Portfolio</h2>
-    <div class="gallery-grid">
-      <!-- Replace these image paths with your actual photos -->
-      <img src="src/assets/nature1.jpg" alt="Nature 1" class="gallery-item" onclick="openLightbox(this)" />
-      <img src="src/assets/portrait1.JPG" alt="Portrait 1" class="gallery-item" onclick="openLightbox(this)" />
-      <img src="src/assets/urban1.jpg" alt="Urban 1" class="gallery-item" onclick="openLightbox(this)" />
-      <img src="src/assets/nature2.jpg" alt="Nature 2" class="gallery-item" onclick="openLightbox(this)" />
-      <img src="src/assets/portrait2.jpg" alt="Portrait 2" class="gallery-item" onclick="openLightbox(this)" />
-      <img src="src/assets/urban2.jpg" alt="Urban 2" class="gallery-item" onclick="openLightbox(this)" />
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      Hi, I’m Daniel Selmeci, a passionate photographer with a focus on capturing the beauty of nature, portraits, and urban life. 
-      Let’s create something amazing together.
-    </p>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:danielselmeci@example.com">danielselmeci@example.com</a></p>
-    <div class="social-links">
-      <a href="https://www.instagram.com" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com" target="_blank">Facebook</a>
-    </div>
-  </section>
-
-  <!-- Lightbox Modal -->
-  <div id="lightbox" class="lightbox">
-    <span class="close" onclick="closeLightbox()">&times;</span>
-    <img class="lightbox-image" id="lightboxImage" />
-    <div class="lightbox-controls">
-      <button class="prev" onclick="changeImage(-1)">&#10094;</button>
-      <button class="next" onclick="changeImage(1)">&#10095;</button>
-    </div>
-  </div>
-
-  <script src="src/script.js"></script>
-</body>
-</html>
+export default PhotographerWebsite;
