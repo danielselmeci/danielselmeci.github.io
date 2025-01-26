@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographer Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    <!-- Hero Section -->
+    <header class="relative h-screen bg-cover bg-center" style="background-image: url('/path-to-hero-image.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="relative flex flex-col items-center justify-center h-full text-white text-center">
+            <h1 class="text-6xl font-extrabold">Capturing the Essence of Moments</h1>
+            <p class="mt-4 text-xl font-light">A Modern Approach to Timeless Photography</p>
+            <a href="#portfolio" class="mt-6 px-8 py-4 text-lg bg-white text-gray-900 rounded-full shadow-lg hover:shadow-xl">View Portfolio</a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-white shadow-sm z-10">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <h2 class="text-3xl font-bold tracking-tight">Photographer</h2>
+            <ul class="flex space-x-8 text-lg">
+                <li><a href="#portfolio" class="hover:underline">Portfolio</a></li>
+                <li><a href="#about" class="hover:underline">About</a></li>
+                <li><a href="#services" class="hover:underline">Services</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-extrabold mb-12">Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="/path-to-portfolio-image-1.jpg" alt="Portfolio 1" class="w-full h-64 object-cover">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="/path-to-portfolio-image-2.jpg" alt="Portfolio 2" class="w-full h-64 object-cover">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="/path-to-portfolio-image-3.jpg" alt="Portfolio 3" class="w-full h-64 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
+            <img src="/path-to-profile-picture.jpg" alt="Photographer" class="w-72 h-72 rounded-full shadow-lg object-cover">
+            <div class="max-w-2xl">
+                <h2 class="text-5xl font-extrabold mb-6">About Me</h2>
+                <p class="text-lg font-light leading-relaxed">I’m a passionate photographer blending modern aesthetics with timeless techniques to craft visually stunning stories. Let’s create something unforgettable together.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-extrabold mb-12">Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="shadow-lg p-8 text-center rounded-lg">
+                    <h3 class="text-3xl font-semibold mb-4">Weddings</h3>
+                    <p class="text-gray-600 mb-6">Starting at $500</p>
+                </div>
+                <div class="shadow-lg p-8 text-center rounded-lg">
+                    <h3 class="text-3xl font-semibold mb-4">Portraits</h3>
+                    <p class="text-gray-600 mb-6">Starting at $300</p>
+                </div>
+                <div class="shadow-lg p-8 text-center rounded-lg">
+                    <h3 class="text-3xl font-semibold mb-4">Events</h3>
+                    <p class="text-gray-600 mb-6">Starting at $700</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-extrabold mb-12">Contact</h2>
+            <form class="max-w-lg mx-auto space-y-6">
+                <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border rounded-lg">
+                <input type="email" placeholder="Your Email" class="w-full px-4 py-3 border rounded-lg">
+                <textarea placeholder="Your Message" class="w-full px-4 py-3 border rounded-lg h-32"></textarea>
+                <button type="submit" class="w-full px-6 py-3 bg-gray-900 text-white text-lg rounded-full shadow-lg hover:bg-gray-800">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-white text-center">
+        <p class="text-lg">&copy; 2025 Photographer. All rights reserved.</p>
+    </footer>
+</body>
+</html>
