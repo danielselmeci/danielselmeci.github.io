@@ -518,11 +518,30 @@ a {
     color: var(--text-secondary);
 }
 
+.award-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
 .award-section {
+    display: block;
     background: var(--bg-secondary);
     border: 2px solid var(--accent-secondary);
     padding: var(--spacing-lg);
     text-align: center;
+    transition: var(--transition-normal);
+}
+
+a.award-section:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .award-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .award-content h3 {
