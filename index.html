@@ -6,21 +6,43 @@
     <meta name="description" content="Daniel Selmeci - Tech Entrepreneur, Award-Winning Photographer, and Founder of Polymath Sphere LLC and Go: TravelApp">
     <meta name="keywords" content="Daniel Selmeci, tech entrepreneur, photographer, Polymath Sphere LLC, Go: TravelApp, travel technology, photography">
     <meta name="author" content="Daniel Selmeci">
-    
+
     <meta property="og:title" content="Daniel Selmeci - Tech Entrepreneur & Photographer">
     <meta property="og:description" content="Tech entrepreneur, award-winning photographer, and founder of Polymath Sphere LLC and Go: TravelApp">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://danielselmeci.com">
-    
+
     <title>Daniel Selmeci - Tech Entrepreneur & Award-Winning Photographer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="canonical" href="https://danielselmeci.com">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://danielselmeci.com/#person",
+      "name": "Daniel Selmeci",
+      "url": "https://danielselmeci.com",
+      "jobTitle": "Tech Entrepreneur and Photographer",
+      "image": "https://danielselmeci.com/images/daniel-selmeci-headshot.jpg",
+      "sameAs": [
+        "https://instagram.com/daniel.selmeci",
+        "https://www.facebook.com/daniel.selmeci.images/",
+        "https://my.flightradar24.com/DanielSelmeci",
+        "https://linkedin.com/in/danielselmeci",
+        "https://crunchbase.com/person/daniel-selmeci",
+        "https://500px.com/p/danielselmeci"
+      ]
+    }
+    </script>
 </head>
 <body>
-    <!-- NAVIGATION -->
     <nav class="nav">
-        <div class="nav-brand">DS</div>
-        <div class="nav-toggle" id="navToggle">
+        <a href="index.html" class="nav-brand">Daniel Selmeci</a>
+        <div class="nav-toggle" id="navToggle" aria-label="Open menu">
             <span></span>
             <span></span>
             <span></span>
@@ -29,235 +51,155 @@
             <li><a href="index.html" class="nav-link active">Home</a></li>
             <li><a href="about.html" class="nav-link">About</a></li>
             <li><a href="#work" class="nav-link">Work</a></li>
+            <li><a href="#photography" class="nav-link">Photography</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- HERO SECTION -->
     <section class="hero">
-        <div class="hero-bg"></div>
+        <div class="hero-media" id="heroMedia" aria-hidden="true"></div>
         <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="line">Daniel</span>
-                    <span class="line">Selmeci</span>
-                </h1>
-                <p class="hero-subtitle">Tech Entrepreneur & Award-Winning Photographer</p>
-                <div class="hero-cta">
-                    <a href="about.html" class="btn btn-primary">Discover My Story</a>
-                    <a href="#work" class="btn btn-outline">View Work</a>
-                </div>
+            <h1 class="hero-title">
+                <span class="line">Daniel</span>
+                <span class="line">Selmeci</span>
+            </h1>
+            <p class="hero-subtitle">Tech entrepreneur &amp; award-winning photographer</p>
+            <div class="hero-cta">
+                <a href="about.html" class="btn btn-primary">About</a>
+                <a href="#work" class="btn btn-outline">Work</a>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <p>Scroll to explore</p>
-        </div>
+        <div class="scroll-indicator">Scroll</div>
     </section>
 
-    <!-- INTRODUCTION -->
     <section class="section intro-section">
-        <div class="container-narrow">
-            <h2 class="section-title">Building the Future of Travel</h2>
+        <div class="container-narrow reveal">
             <p class="lead">
-                I merge entrepreneurship with artistic vision to create meaningful digital experiences. 
-                As founder of <strong>Polymath Sphere LLC</strong> and creator of <strong>Go: TravelApp</strong>, 
-                I transform how people explore the world.
+                I build travel technology and photograph the world that inspires it —
+                as founder of <strong>Polymath Sphere LLC</strong> and creator of <strong>Go: TravelApp</strong>.
             </p>
         </div>
     </section>
 
-    <!-- WORK SECTION -->
     <section class="section work-section" id="work">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">What I Do</span>
-                <h2 class="section-title">Ventures & Projects</h2>
+            <div class="section-header reveal">
+                <span class="section-label">Ventures</span>
+                <h2 class="section-title">Building at the edge of travel &amp; tech</h2>
             </div>
 
-            <div class="work-grid">
-                <!-- Polymath Sphere -->
-                <article class="work-card work-card-large">
-                    <div class="work-card-content">
+            <div class="work-list">
+                <article class="work-item reveal">
+                    <div class="work-copy">
                         <span class="work-number">01</span>
                         <h3 class="work-title">Polymath Sphere LLC</h3>
                         <p class="work-description">
-                            A creative and technical innovation venture pushing the boundaries of digital solutions. 
-                            Building tools that solve real-world problems at the intersection of technology and creativity.
+                            A creative and technical innovation venture building digital tools
+                            at the intersection of technology and creativity.
                         </p>
-                        <a href="https://polymathsphere.com" class="work-link" target="_blank" rel="noopener">
-                            Explore Project →
-                        </a>
+                        <a href="https://polymathsphere.com" class="text-link" target="_blank" rel="noopener">Explore Polymath Sphere →</a>
                     </div>
-                    <div class="work-card-visual">
-                        <div class="work-visual-placeholder tech"></div>
-                    </div>
+                    <div class="work-visual tech" data-label="Venture"></div>
                 </article>
 
-                <!-- Go: TravelApp -->
-                <article class="work-card work-card-large work-card-reverse">
-                    <div class="work-card-content">
+                <article class="work-item work-item-reverse reveal">
+                    <div class="work-copy">
                         <span class="work-number">02</span>
                         <h3 class="work-title">Go: TravelApp</h3>
                         <p class="work-description">
-                            A comprehensive journey planning platform built from firsthand international travel insights. 
-                            Streamlining exploration for global travelers through seamless digital innovation.
+                            A journey planning platform shaped by firsthand international travel —
+                            built to make exploration simpler for global travelers.
                         </p>
-                        <span class="work-tag">TravelTech Platform</span>
+                        <span class="work-meta">TravelTech · iOS · 16+</span>
                     </div>
-                    <div class="work-card-visual">
-                        <div class="work-visual-placeholder travel"></div>
-                    </div>
+                    <div class="work-visual travel" data-label="Product"></div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- PHOTOGRAPHY SECTION -->
-    <section class="section photo-section">
+    <section class="section photo-section" id="photography">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Visual Storytelling</span>
-                <h2 class="section-title">Photography</h2>
+            <div class="section-header reveal">
+                <span class="section-label">Photography</span>
+                <h2 class="section-title">Visual storytelling from the road</h2>
             </div>
 
-            <div class="photo-grid">
-                <div class="photo-item photo-item-tall">
+            <div class="photo-grid reveal">
+                <div class="photo-item photo-item-tall aerial" data-image="images/aerial.jpg">
                     <div class="photo-overlay">
                         <h4>Aerial Perspectives</h4>
                         <p>DJI Mavic 2 Pro</p>
                     </div>
                 </div>
-                <div class="photo-item">
+                <div class="photo-item architecture" data-image="images/architecture.jpg">
                     <div class="photo-overlay">
                         <h4>Architecture</h4>
                         <p>Rome to New York</p>
                     </div>
                 </div>
-                <div class="photo-item">
+                <div class="photo-item portrait" data-image="images/portrait.jpg">
                     <div class="photo-overlay">
                         <h4>Portraiture</h4>
                         <p>Nikon D780</p>
                     </div>
                 </div>
-                <div class="photo-item photo-item-wide">
+                <div class="photo-item photo-item-wide landscape" data-image="images/landscape.jpg">
                     <div class="photo-overlay">
-                        <h4>Nature & Landscapes</h4>
-                        <p>Global Journeys</p>
+                        <h4>Nature &amp; Landscapes</h4>
+                        <p>Global journeys</p>
                     </div>
                 </div>
             </div>
 
-            <div class="award-grid">
-                <a class="award-section" href="https://www.instagram.com/p/DCHUxhJgJb4/" target="_blank" rel="noopener">
-                    <div class="award-content">
-                        <span class="award-icon"></span>
-                        <h3>Shoot The Wild</h3>
-                        <p>International Wild Photography Award Finalist</p>
-                    </div>
+            <div class="award-grid reveal">
+                <a class="award-link" href="https://www.instagram.com/p/DCHUxhJgJb4/" target="_blank" rel="noopener">
+                    <h3>Shoot The Wild</h3>
+                    <p>International wild photography award finalist</p>
+                    <span class="award-cta">View on Instagram →</span>
                 </a>
-                <a class="award-section" href="https://www.instagram.com/p/DBOWPyahVaX/" target="_blank" rel="noopener">
-                    <div class="award-content">
-                        <span class="award-icon"></span>
-                        <h3>Shoot The Frame</h3>
-                        <p>Castle in the forest — Featured community photograph</p>
-                    </div>
+                <a class="award-link" href="https://www.instagram.com/p/DBOWPyahVaX/" target="_blank" rel="noopener">
+                    <h3>Shoot The Frame</h3>
+                    <p>Castle in the forest — featured community photograph</p>
+                    <span class="award-cta">View on Instagram →</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- STATS SECTION -->
-    <section class="section stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">2</div>
-                    <div class="stat-label">Ventures Founded</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">Global</div>
-                    <div class="stat-label">Travel Portfolio</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">Award</div>
-                    <div class="stat-label">Winning Photographer</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
     <section class="section contact-section" id="contact">
         <div class="container-narrow">
-            <div class="section-header text-center">
-                <span class="section-label">Get In Touch</span>
-                <h2 class="section-title">Let's Connect</h2>
+            <div class="section-header text-center reveal">
+                <span class="section-label">Connect</span>
+                <h2 class="section-title">Find me online</h2>
                 <p class="section-description">
-                    Interested in collaboration, photography, or travel tech? Reach out through any platform.
+                    Collaboration, photography, or travel tech — reach out on any platform.
                 </p>
             </div>
 
-            <div class="social-grid">
-                <a href="https://instagram.com/daniel.selmeci" class="social-item" target="_blank" rel="noopener">
-                    <div class="social-icon">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    </div>
-                    <span class="social-name">Instagram</span>
-                </a>
-
-                <a href="https://500px.com/p/danielselmeci" class="social-item" target="_blank" rel="noopener">
-                    <div class="social-icon">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm0 13c-2.67 0-5.03-1.36-6.4-3.44.03-2.12 4.27-3.28 6.4-3.28s6.37 1.16 6.4 3.28C17.03 17.14 14.67 18.5 12 18.5z"/></svg>
-                    </div>
-                    <span class="social-name">500px</span>
-                </a>
-
-                <a href="https://linkedin.com/in/danielselmeci" class="social-item" target="_blank" rel="noopener">
-                    <div class="social-icon">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    </div>
-                    <span class="social-name">LinkedIn</span>
-                </a>
-
-                <a href="https://www.facebook.com/daniel.selmeci.images/" class="social-item" target="_blank" rel="noopener">
-                    <div class="social-icon">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    </div>
-                    <span class="social-name">Facebook</span>
-                </a>
-
-                <a href="https://my.flightradar24.com/DanielSelmeci" class="social-item" target="_blank" rel="noopener">
-                    <div class="social-icon">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4 8v8l8 6 8-6V8l-8-6zm0 2.5l6 4.5v6l-6 4.5-6-4.5v-6l6-4.5z"/></svg>
-                    </div>
-                    <span class="social-name">FlightRadar24</span>
-                </a>
-
-                <a href="https://crunchbase.com/person/daniel-selmeci" class="social-item" target="_blank" rel="noopener">
-                    <div class="social-icon">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M21.6 0H2.4A2.41 2.41 0 0 0 0 2.4v19.2A2.41 2.41 0 0 0 2.4 24h19.2a2.41 2.41 0 0 0 2.4-2.4V2.4A2.41 2.41 0 0 0 21.6 0zM7.045 14.465A2.11 2.11 0 0 0 9.84 13.42h1.66a3.69 3.69 0 1 1 0-1.75H9.84a2.11 2.11 0 1 0-2.795 2.795zm11.345-1.21a3.69 3.69 0 1 1-1.77-3.16V6.5h-1.75v3.595a3.69 3.69 0 0 1 1.77 3.16z"/></svg>
-                    </div>
-                    <span class="social-name">Crunchbase</span>
-                </a>
+            <div class="social-row reveal">
+                <a href="https://instagram.com/daniel.selmeci" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://500px.com/p/danielselmeci" target="_blank" rel="noopener">500px</a>
+                <a href="https://linkedin.com/in/danielselmeci" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://www.facebook.com/daniel.selmeci.images/" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://my.flightradar24.com/DanielSelmeci" target="_blank" rel="noopener">FlightRadar24</a>
+                <a href="https://crunchbase.com/person/daniel-selmeci" target="_blank" rel="noopener">Crunchbase</a>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="footer-logo">DS</div>
-                    <p>Building the future of travel technology, one journey at a time.</p>
+                    <div class="footer-logo">Daniel Selmeci</div>
+                    <p>Tech entrepreneur &amp; photographer building the future of travel.</p>
                 </div>
                 <div class="footer-links">
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a>
                     <a href="#work">Work</a>
+                    <a href="#photography">Photography</a>
                     <a href="#contact">Contact</a>
                 </div>
             </div>
@@ -268,27 +210,58 @@
     </footer>
 
     <script>
-        // Mobile navigation toggle
         const navToggle = document.getElementById('navToggle');
         const navMenu = document.getElementById('navMenu');
-        
+
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
         });
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
             anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (!href || href === '#') return;
+                const target = document.querySelector(href);
+                if (!target) return;
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                    navMenu.classList.remove('active');
-                    navToggle.classList.remove('active');
-                }
+                target.scrollIntoView({ behavior: 'smooth' });
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
             });
         });
+
+        const heroMedia = document.getElementById('heroMedia');
+        const heroImage = new Image();
+        heroImage.onload = () => {
+            heroMedia.style.setProperty('--hero-image', 'url("images/hero.jpg")');
+            heroMedia.classList.add('has-image');
+        };
+        heroImage.src = 'images/hero.jpg';
+
+        document.querySelectorAll('.photo-item[data-image]').forEach((item) => {
+            const src = item.getAttribute('data-image');
+            const img = new Image();
+            img.onload = () => {
+                item.style.backgroundImage = `linear-gradient(180deg, transparent 35%, rgba(15,18,16,0.8)), url("${src}")`;
+            };
+            img.src = src;
+        });
+
+        const revealEls = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            revealEls.forEach((el) => observer.observe(el));
+        } else {
+            revealEls.forEach((el) => el.classList.add('is-visible'));
+        }
     </script>
 </body>
 </html>

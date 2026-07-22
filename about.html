@@ -6,16 +6,19 @@
     <meta name="description" content="Learn about Daniel Selmeci - Tech entrepreneur, award-winning photographer, and founder of Polymath Sphere LLC and Go: TravelApp">
     <meta name="keywords" content="Daniel Selmeci, biography, tech entrepreneur, photographer, Polymath Sphere LLC, Go: TravelApp">
     <meta name="author" content="Daniel Selmeci">
-    
+
     <meta property="og:title" content="About Daniel Selmeci - Tech Entrepreneur & Photographer">
     <meta property="og:description" content="Daniel Selmeci is a tech entrepreneur, award-winning photographer, and founder of Polymath Sphere LLC and Go: TravelApp">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://danielselmeci.com/about.html">
-    
+
     <title>About - Daniel Selmeci</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="canonical" href="https://danielselmeci.com/about.html">
-    
+
     <!-- CRITICAL: JSON-LD Person Schema for Google Knowledge Graph -->
     <script type="application/ld+json">
     {
@@ -42,9 +45,7 @@
             "https://my.flightradar24.com/DanielSelmeci",
             "https://linkedin.com/in/danielselmeci",
             "https://crunchbase.com/person/daniel-selmeci",
-            "https://500px.com/p/danielselmeci",
-            "https://www.instagram.com/p/DCHUxhJgJb4/",
-            "https://www.instagram.com/p/DBOWPyahVaX/"
+            "https://500px.com/p/danielselmeci"
           ]
         },
         {
@@ -77,10 +78,9 @@
     </script>
 </head>
 <body>
-    <!-- NAVIGATION -->
     <nav class="nav">
-        <div class="nav-brand">DS</div>
-        <div class="nav-toggle" id="navToggle">
+        <a href="index.html" class="nav-brand">Daniel Selmeci</a>
+        <div class="nav-toggle" id="navToggle" aria-label="Open menu">
             <span></span>
             <span></span>
             <span></span>
@@ -89,36 +89,33 @@
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="about.html" class="nav-link active">About</a></li>
             <li><a href="index.html#work" class="nav-link">Work</a></li>
+            <li><a href="index.html#photography" class="nav-link">Photography</a></li>
             <li><a href="index.html#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- ABOUT HERO -->
     <section class="about-hero">
         <div class="container-narrow">
-            <span class="page-label">About Me</span>
+            <span class="page-label">About</span>
             <h1 class="page-title">Daniel Selmeci</h1>
-            <p class="page-subtitle">Tech Entrepreneur | Award-Winning Photographer | Founder</p>
+            <p class="page-subtitle">Tech entrepreneur · Award-winning photographer · Founder</p>
         </div>
     </section>
 
-    <!-- BIOGRAPHY SECTION -->
     <section class="section biography-section">
         <div class="container">
             <div class="bio-layout">
-                <aside class="bio-sidebar">
-                    <div class="bio-image-wrapper">
-                        <div class="bio-image-placeholder">
-                            <span>Professional Headshot</span>
-                        </div>
+                <aside class="bio-sidebar reveal">
+                    <div class="bio-image" id="bioImage">
+                        <span>Add headshot → images/daniel-selmeci-headshot.jpg</span>
                     </div>
-                    
+
                     <div class="bio-quick-facts">
                         <h3>Quick Facts</h3>
                         <ul class="fact-list">
                             <li>
                                 <span class="fact-label">Role</span>
-                                <span class="fact-value">Founder & Entrepreneur</span>
+                                <span class="fact-value">Founder &amp; Entrepreneur</span>
                             </li>
                             <li>
                                 <span class="fact-label">Company</span>
@@ -140,9 +137,9 @@
                     </div>
                 </aside>
 
-                <article class="bio-content">
+                <article class="bio-content reveal">
                     <h2>Biography</h2>
-                    
+
                     <p>Daniel Selmeci is a tech entrepreneur, award-winning photographer, and content creator who builds digital tools to enhance the modern travel experience. He is the founder of Polymath Sphere LLC, a venture dedicated to creative and technical innovation, and the creator of Go: TravelApp, a platform designed to streamline journey planning and exploration for global travelers.</p>
 
                     <p>Driven by a profound passion for exploration, Daniel has heavily documented his international journeys through a portfolio focused on nature, architecture, and portraiture. His distinctive visual storytelling earned him recognition as a finalist in Shoot The Wild, an international wild photography award. His photograph <em>Castle in the forest</em> was also featured by Shoot The Frame as work by community member Daniel Selmeci. Utilizing advanced gear like the Nikon D780 and the DJI Mavic 2 Pro, he captures unique aerial and ground perspectives from major global hubs, ranging from historical landmarks in Rome to the urban landscape of New York City.</p>
@@ -153,51 +150,38 @@
         </div>
     </section>
 
-    <!-- EXPERTISE SECTION -->
     <section class="section expertise-section">
         <div class="container">
-            <div class="section-header text-center">
-                <span class="section-label">What I Do</span>
-                <h2 class="section-title">Areas of Expertise</h2>
+            <div class="section-header text-center reveal">
+                <span class="section-label">Focus</span>
+                <h2 class="section-title">Where tech meets the lens</h2>
             </div>
 
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <div class="expertise-number">01</div>
+            <div class="expertise-list reveal">
+                <div class="expertise-item">
                     <h3>Travel Technology</h3>
-                    <p>Building digital solutions for modern travelers based on firsthand international experience and deep industry insights.</p>
+                    <p>Digital solutions for modern travelers, grounded in firsthand international experience.</p>
                 </div>
-
-                <div class="expertise-card">
-                    <div class="expertise-number">02</div>
+                <div class="expertise-item">
                     <h3>Photography</h3>
-                    <p>Award-winning visual storytelling through nature, architecture, and portraiture captured across the globe.</p>
+                    <p>Award-winning visual storytelling across nature, architecture, and portraiture.</p>
                 </div>
-
-                <div class="expertise-card">
-                    <div class="expertise-number">03</div>
+                <div class="expertise-item">
                     <h3>Entrepreneurship</h3>
-                    <p>Founding and developing ventures at the intersection of creativity, technology, and innovation.</p>
-                </div>
-
-                <div class="expertise-card">
-                    <div class="expertise-number">04</div>
-                    <h3>Content Creation</h3>
-                    <p>Documenting global journeys through compelling aerial and ground perspectives using professional equipment.</p>
+                    <p>Founding ventures at the intersection of creativity, technology, and exploration.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TIMELINE SECTION -->
     <section class="section timeline-section">
         <div class="container-narrow">
-            <div class="section-header text-center">
+            <div class="section-header text-center reveal">
                 <span class="section-label">Journey</span>
                 <h2 class="section-title">Milestones</h2>
             </div>
 
-            <div class="timeline">
+            <div class="timeline reveal">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
@@ -211,7 +195,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Go: TravelApp</h3>
-                        <p>Created comprehensive journey planning platform</p>
+                        <p>Created journey planning platform for global travelers</p>
                         <span class="timeline-tag">Creator</span>
                     </div>
                 </div>
@@ -221,7 +205,7 @@
                     <div class="timeline-content">
                         <h3>Shoot The Wild</h3>
                         <p>International wild photography award finalist</p>
-                        <a href="https://www.instagram.com/p/DCHUxhJgJb4/" class="work-link" target="_blank" rel="noopener">View on Instagram →</a>
+                        <a href="https://www.instagram.com/p/DCHUxhJgJb4/" class="text-link" target="_blank" rel="noopener">View on Instagram →</a>
                         <span class="timeline-tag">Recognition</span>
                     </div>
                 </div>
@@ -231,7 +215,7 @@
                     <div class="timeline-content">
                         <h3>Shoot The Frame — Castle in the forest</h3>
                         <p>Featured photograph by community member Daniel Selmeci</p>
-                        <a href="https://www.instagram.com/p/DBOWPyahVaX/" class="work-link" target="_blank" rel="noopener">View on Instagram →</a>
+                        <a href="https://www.instagram.com/p/DBOWPyahVaX/" class="text-link" target="_blank" rel="noopener">View on Instagram →</a>
                         <span class="timeline-tag">Recognition</span>
                     </div>
                 </div>
@@ -239,100 +223,63 @@
         </div>
     </section>
 
-    <!-- CONNECT SECTION -->
     <section class="section connect-section">
         <div class="container">
-            <div class="section-header text-center">
-                <span class="section-label">Stay Connected</span>
-                <h2 class="section-title">Find Me Online</h2>
+            <div class="section-header text-center reveal">
+                <span class="section-label">Connect</span>
+                <h2 class="section-title">Find me online</h2>
                 <p class="section-description">
-                    Connect across platforms to see my latest work, travels, and ventures
+                    Profiles listed here match the sameAs URLs in the Person schema.
                 </p>
             </div>
 
-            <!-- CRITICAL: These links MUST match the sameAs URLs in JSON-LD schema -->
-            <div class="platform-grid">
-                <a href="https://instagram.com/daniel.selmeci" class="platform-card" target="_blank" rel="noopener">
-                    <div class="platform-header">
-                        <div class="platform-icon">
-                            <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </div>
-                        <h3>Instagram</h3>
-                    </div>
-                    <p>Photography portfolio & visual stories</p>
-                    <span class="platform-arrow">→</span>
+            <div class="platform-list reveal">
+                <a href="https://instagram.com/daniel.selmeci" class="platform-item" target="_blank" rel="noopener">
+                    <h3>Instagram</h3>
+                    <p>Photography portfolio &amp; visual stories</p>
+                    <span>Visit →</span>
                 </a>
-
-                <a href="https://500px.com/p/danielselmeci" class="platform-card" target="_blank" rel="noopener">
-                    <div class="platform-header">
-                        <div class="platform-icon">
-                            <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm0 13c-2.67 0-5.03-1.36-6.4-3.44.03-2.12 4.27-3.28 6.4-3.28s6.37 1.16 6.4 3.28C17.03 17.14 14.67 18.5 12 18.5z"/></svg>
-                        </div>
-                        <h3>500px</h3>
-                    </div>
+                <a href="https://500px.com/p/danielselmeci" class="platform-item" target="_blank" rel="noopener">
+                    <h3>500px</h3>
                     <p>Curated photography portfolio</p>
-                    <span class="platform-arrow">→</span>
+                    <span>Visit →</span>
                 </a>
-
-                <a href="https://linkedin.com/in/danielselmeci" class="platform-card" target="_blank" rel="noopener">
-                    <div class="platform-header">
-                        <div class="platform-icon">
-                            <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </div>
-                        <h3>LinkedIn</h3>
-                    </div>
-                    <p>Professional network & career updates</p>
-                    <span class="platform-arrow">→</span>
+                <a href="https://linkedin.com/in/danielselmeci" class="platform-item" target="_blank" rel="noopener">
+                    <h3>LinkedIn</h3>
+                    <p>Professional network &amp; career updates</p>
+                    <span>Visit →</span>
                 </a>
-
-                <a href="https://www.facebook.com/daniel.selmeci.images/" class="platform-card" target="_blank" rel="noopener">
-                    <div class="platform-header">
-                        <div class="platform-icon">
-                            <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        </div>
-                        <h3>Facebook</h3>
-                    </div>
-                    <p>Community & social updates</p>
-                    <span class="platform-arrow">→</span>
+                <a href="https://www.facebook.com/daniel.selmeci.images/" class="platform-item" target="_blank" rel="noopener">
+                    <h3>Facebook</h3>
+                    <p>Community &amp; social updates</p>
+                    <span>Visit →</span>
                 </a>
-
-                <a href="https://my.flightradar24.com/DanielSelmeci" class="platform-card" target="_blank" rel="noopener">
-                    <div class="platform-header">
-                        <div class="platform-icon">
-                            <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4 8v8l8 6 8-6V8l-8-6zm0 2.5l6 4.5v6l-6 4.5-6-4.5v-6l6-4.5z"/></svg>
-                        </div>
-                        <h3>FlightRadar24</h3>
-                    </div>
-                    <p>Travel tracking & aviation insights</p>
-                    <span class="platform-arrow">→</span>
+                <a href="https://my.flightradar24.com/DanielSelmeci" class="platform-item" target="_blank" rel="noopener">
+                    <h3>FlightRadar24</h3>
+                    <p>Travel tracking &amp; aviation insights</p>
+                    <span>Visit →</span>
                 </a>
-
-                <a href="https://crunchbase.com/person/daniel-selmeci" class="platform-card" target="_blank" rel="noopener">
-                    <div class="platform-header">
-                        <div class="platform-icon">
-                            <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M21.6 0H2.4A2.41 2.41 0 0 0 0 2.4v19.2A2.41 2.41 0 0 0 2.4 24h19.2a2.41 2.41 0 0 0 2.4-2.4V2.4A2.41 2.41 0 0 0 21.6 0zM7.045 14.465A2.11 2.11 0 0 0 9.84 13.42h1.66a3.69 3.69 0 1 1 0-1.75H9.84a2.11 2.11 0 1 0-2.795 2.795zm11.345-1.21a3.69 3.69 0 1 1-1.77-3.16V6.5h-1.75v3.595a3.69 3.69 0 0 1 1.77 3.16z"/></svg>
-                        </div>
-                        <h3>Crunchbase</h3>
-                    </div>
-                    <p>Company profiles & venture details</p>
-                    <span class="platform-arrow">→</span>
+                <a href="https://crunchbase.com/person/daniel-selmeci" class="platform-item" target="_blank" rel="noopener">
+                    <h3>Crunchbase</h3>
+                    <p>Company profiles &amp; venture details</p>
+                    <span>Visit →</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="footer-logo">DS</div>
-                    <p>Building the future of travel technology, one journey at a time.</p>
+                    <div class="footer-logo">Daniel Selmeci</div>
+                    <p>Tech entrepreneur &amp; photographer building the future of travel.</p>
                 </div>
                 <div class="footer-links">
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a>
                     <a href="index.html#work">Work</a>
+                    <a href="index.html#photography">Photography</a>
                     <a href="index.html#contact">Contact</a>
                 </div>
             </div>
@@ -345,11 +292,34 @@
     <script>
         const navToggle = document.getElementById('navToggle');
         const navMenu = document.getElementById('navMenu');
-        
+
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
         });
+
+        const bioImage = document.getElementById('bioImage');
+        const headshot = new Image();
+        headshot.onload = () => {
+            bioImage.style.backgroundImage = `url("images/daniel-selmeci-headshot.jpg")`;
+            bioImage.classList.add('has-image');
+        };
+        headshot.src = 'images/daniel-selmeci-headshot.jpg';
+
+        const revealEls = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            revealEls.forEach((el) => observer.observe(el));
+        } else {
+            revealEls.forEach((el) => el.classList.add('is-visible'));
+        }
     </script>
 </body>
 </html>
