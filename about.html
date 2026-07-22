@@ -20,37 +20,45 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Daniel Selmeci",
-      "url": "https://danielselmeci.com",
-      "jobTitle": "Tech Entrepreneur and Photographer",
-      "image": "https://danielselmeci.com/images/daniel-selmeci-headshot.jpg",
-      "description": "Daniel Selmeci is a tech entrepreneur, award-winning photographer, and founder of Polymath Sphere LLC and GO: Travel App.",
-      "worksFor": [
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://danielselmeci.com/#person",
+          "name": "Daniel Selmeci",
+          "url": "https://danielselmeci.com",
+          "jobTitle": "Tech Entrepreneur and Photographer",
+          "image": "https://danielselmeci.com/images/daniel-selmeci-headshot.jpg",
+          "description": "Daniel Selmeci is a tech entrepreneur, award-winning photographer, and founder of Polymath Sphere LLC and GO: Travel App.",
+          "worksFor": {
+            "@id": "https://polymathsphere.com/#organization"
+          },
+          "award": "Shoot The Frame Photography Awards Finalist",
+          "sameAs": [
+            "https://instagram.com/danielselmeci",
+            "https://flightradar24.com/user/danielselmeci",
+            "https://facebook.com/danielselmeci",
+            "https://linkedin.com/in/danielselmeci",
+            "https://crunchbase.com/person/daniel-selmeci"
+          ]
+        },
         {
           "@type": "Organization",
-          "name": "Polymath Sphere LLC"
-        }
-      ],
-      "founderOf": [
-        {
-          "@type": "Organization",
+          "@id": "https://polymathsphere.com/#organization",
           "name": "Polymath Sphere LLC",
-          "url": "https://polymathsphere.com"
+          "url": "https://polymathsphere.com",
+          "founder": {
+            "@id": "https://danielselmeci.com/#person"
+          }
         },
         {
           "@type": "SoftwareApplication",
-          "name": "Go: Travel App",
-          "applicationCategory": "TravelApplication"
+          "@id": "https://danielselmeci.com/#go-travel-app",
+          "name": "GO: Travel App",
+          "applicationCategory": "TravelApplication",
+          "creator": {
+            "@id": "https://danielselmeci.com/#person"
+          }
         }
-      ],
-      "award": "Shoot The Frame Photography Awards Finalist",
-      "sameAs": [
-        "https://instagram.com/danielselmeci",
-        "https://flightradar24.com/user/danielselmeci",
-        "https://facebook.com/danielselmeci",
-        "https://linkedin.com/in/danielselmeci",
-        "https://crunchbase.com/person/daniel-selmeci"
       ]
     }
     </script>
