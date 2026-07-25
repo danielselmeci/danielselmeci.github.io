@@ -13,6 +13,8 @@
     <meta property="og:url" content="https://danielselmeci.com">
 
     <title>Daniel Selmeci - Tech Entrepreneur & Award-Winning Photographer</title>
+    <link rel="icon" type="image/png" href="images/icon512x512.png">
+    <link rel="apple-touch-icon" href="images/icon512x512.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet">
@@ -41,12 +43,15 @@
 </head>
 <body>
     <nav class="nav">
-        <a href="index.html" class="nav-brand">Daniel Selmeci</a>
-        <div class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <a href="index.html" class="nav-brand">
+            <img src="images/icon512x512.png" alt="" class="nav-logo" width="36" height="36">
+            <span>Daniel Selmeci</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
         <ul class="nav-menu" id="navMenu">
             <li><a href="index.html" class="nav-link active">Home</a></li>
             <li><a href="about.html" class="nav-link">About</a></li>
@@ -192,7 +197,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="footer-logo">Daniel Selmeci</div>
+                    <div class="footer-logo">
+                        <img src="images/icon512x512.png" alt="" width="40" height="40">
+                        <span>Daniel Selmeci</span>
+                    </div>
                     <p>Tech entrepreneur &amp; photographer building the future of travel.</p>
                 </div>
                 <div class="footer-links">
@@ -213,9 +221,25 @@
         const navToggle = document.getElementById('navToggle');
         const navMenu = document.getElementById('navMenu');
 
+        const setMenuOpen = (open) => {
+            navMenu.classList.toggle('active', open);
+            navToggle.classList.toggle('active', open);
+            navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        };
+
         navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
+            setMenuOpen(!navMenu.classList.contains('active'));
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navMenu.classList.contains('active')) return;
+            if (navMenu.contains(e.target) || navToggle.contains(e.target)) return;
+            setMenuOpen(false);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') setMenuOpen(false);
         });
 
         document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -226,8 +250,7 @@
                 if (!target) return;
                 e.preventDefault();
                 target.scrollIntoView({ behavior: 'smooth' });
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
+                setMenuOpen(false);
             });
         });
 

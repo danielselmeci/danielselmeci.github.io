@@ -153,21 +153,34 @@ strong {
 }
 
 .nav-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
     font-family: var(--font-display);
-    font-size: 1.35rem;
+    font-size: 1.15rem;
     letter-spacing: 0.04em;
     z-index: 1001;
 }
 
+.nav-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
 .nav-toggle {
+    display: none;
     width: 40px;
     height: 40px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 6px;
     cursor: pointer;
     z-index: 1001;
+    background: none;
+    border: 0;
+    padding: 0;
 }
 
 .nav-toggle span {
@@ -191,33 +204,73 @@ strong {
 }
 
 .nav-menu {
-    position: fixed;
-    inset: 0;
     list-style: none;
-    background: var(--bg-primary);
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    transform: translateX(100%);
-    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-    z-index: 999;
-}
-
-.nav-menu.active {
-    transform: translateX(0);
+    gap: 1.75rem;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-link {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     color: var(--text-secondary);
 }
 
 .nav-link:hover,
 .nav-link.active {
     color: var(--accent);
+}
+
+@media (max-width: 800px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        right: var(--space-md);
+        left: auto;
+        min-width: 12.5rem;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0.5rem;
+        background: rgba(23, 27, 24, 0.96);
+        border: 1px solid var(--border);
+        backdrop-filter: blur(16px);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-6px);
+        transition: opacity var(--ease), transform var(--ease), visibility var(--ease);
+        pointer-events: none;
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 0.85rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background: var(--accent-soft);
+    }
 }
 
 /* ===== BUTTONS ===== */
@@ -600,9 +653,18 @@ strong {
 }
 
 .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
     font-family: var(--font-display);
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 .footer-brand p {
