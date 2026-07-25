@@ -8,16 +8,18 @@
 }
 
 :root {
-    --bg-primary: #0f1210;
-    --bg-secondary: #171b18;
-    --bg-elevated: #1e2420;
-    --text-primary: #f2ebe1;
-    --text-secondary: #b8b0a4;
-    --text-muted: #7a746c;
+    --bg-primary: #070c09;
+    --bg-secondary: #0e1611;
+    --bg-elevated: #152019;
+    --text-primary: #e8efe6;
+    --text-secondary: #a7b5a8;
+    --text-muted: #6d7a6f;
     --accent: #c4896a;
-    --accent-soft: rgba(196, 137, 106, 0.18);
-    --border: rgba(242, 235, 225, 0.1);
-    --overlay: rgba(15, 18, 16, 0.55);
+    --accent-soft: rgba(196, 137, 106, 0.16);
+    --forest: #1a3a2a;
+    --moss: #2f5c45;
+    --border: rgba(232, 239, 230, 0.09);
+    --overlay: rgba(7, 12, 9, 0.6);
     --glow-x: 50%;
     --glow-y: 30%;
 
@@ -50,9 +52,10 @@ body {
     opacity: 0;
     transition: opacity 0.7s ease;
     background-image:
-        radial-gradient(600px 400px at var(--glow-x) var(--glow-y), rgba(196, 137, 106, 0.14), transparent 55%),
-        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(196, 137, 106, 0.1), transparent 55%),
-        radial-gradient(ellipse 60% 40% at 90% 20%, rgba(122, 158, 150, 0.08), transparent 50%);
+        radial-gradient(700px 460px at var(--glow-x) var(--glow-y), rgba(47, 92, 69, 0.22), transparent 55%),
+        radial-gradient(ellipse 80% 50% at 8% -8%, rgba(26, 58, 42, 0.45), transparent 55%),
+        radial-gradient(ellipse 55% 40% at 92% 12%, rgba(196, 137, 106, 0.08), transparent 50%),
+        linear-gradient(180deg, #070c09 0%, #0a120e 45%, #070c09 100%);
     background-attachment: fixed;
 }
 
@@ -66,8 +69,22 @@ body::before {
     inset: 0;
     pointer-events: none;
     z-index: 2000;
-    opacity: 0.045;
+    opacity: 0.05;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.shield-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #070c09;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.12s ease;
+}
+
+.shield-overlay.is-on {
+    opacity: 1;
 }
 
 body.has-custom-cursor,
@@ -113,6 +130,24 @@ body.cursor-hover .cursor-ring {
 img {
     max-width: 100%;
     display: block;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+::selection {
+    background: rgba(196, 137, 106, 0.35);
+    color: var(--text-primary);
+}
+
+.photo-item,
+.hero-media,
+.bio-image,
+.work-visual,
+.nav-logo,
+.footer-logo img {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 a {
@@ -364,6 +399,21 @@ strong {
     text-transform: uppercase;
     border: 1px solid var(--accent);
     transition: var(--ease);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.14) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: none;
+}
+
+.btn:hover::after {
+    animation: shineSweep 0.7s ease;
 }
 
 .btn-primary {
@@ -410,8 +460,8 @@ strong {
     position: absolute;
     inset: -4%;
     background:
-        linear-gradient(180deg, rgba(15, 18, 16, 0.25) 0%, rgba(15, 18, 16, 0.82) 78%, var(--bg-primary) 100%),
-        linear-gradient(135deg, #2a332e 0%, #1a1f1c 45%, #3a2f28 100%);
+        linear-gradient(180deg, rgba(7, 12, 9, 0.2) 0%, rgba(7, 12, 9, 0.78) 72%, var(--bg-primary) 100%),
+        linear-gradient(145deg, #1a3a2a 0%, #0e1611 48%, #243528 100%);
     background-size: cover;
     background-position: center;
     animation: heroDrift 22s ease-in-out infinite alternate;
@@ -545,6 +595,16 @@ strong {
     font-weight: 500;
 }
 
+.lead a {
+    color: inherit;
+    border-bottom: 1px solid rgba(196, 137, 106, 0.45);
+}
+
+.lead a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
 /* ===== WORK ===== */
 .work-list {
     display: flex;
@@ -585,7 +645,8 @@ strong {
 }
 
 .work-meta {
-    display: inline-block;
+    display: block;
+    margin-top: 0.85rem;
     font-size: 0.75rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -630,11 +691,11 @@ strong {
 }
 
 .work-visual.tech {
-    background-image: linear-gradient(145deg, #243029 0%, #1a1f1c 55%, rgba(196, 137, 106, 0.25) 100%);
+    background-image: linear-gradient(145deg, #1f3d2e 0%, #0e1611 55%, rgba(196, 137, 106, 0.22) 100%);
 }
 
 .work-visual.travel {
-    background-image: linear-gradient(145deg, #2c2620 0%, #1a1f1c 50%, rgba(122, 158, 150, 0.25) 100%);
+    background-image: linear-gradient(145deg, #243528 0%, #0c1410 50%, rgba(47, 92, 69, 0.35) 100%);
 }
 
 /* ===== PHOTOGRAPHY ===== */
@@ -696,19 +757,19 @@ strong {
 }
 
 .photo-item.aerial {
-    background-image: linear-gradient(160deg, #3d4a42, #1c221e);
+    background-image: linear-gradient(160deg, #2f5c45, #0e1611);
 }
 
 .photo-item.architecture {
-    background-image: linear-gradient(160deg, #4a3f36, #221c18);
+    background-image: linear-gradient(160deg, #3a4a3c, #121a15);
 }
 
 .photo-item.portrait {
-    background-image: linear-gradient(160deg, #3a3530, #191714);
+    background-image: linear-gradient(160deg, #2a3830, #0a120e);
 }
 
 .photo-item.landscape {
-    background-image: linear-gradient(160deg, #2f4038, #151a17);
+    background-image: linear-gradient(160deg, #1a3a2a, #070c09);
 }
 
 .photo-overlay {
@@ -741,6 +802,12 @@ strong {
     padding: var(--space-md) 0;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
+    transition: padding var(--ease), border-color var(--ease);
+}
+
+.award-link:hover {
+    padding-left: 0.5rem;
+    border-color: rgba(196, 137, 106, 0.35);
 }
 
 .award-link:hover h3 {
@@ -946,6 +1013,18 @@ strong {
 .fact-value {
     color: var(--text-secondary);
     font-size: 0.95rem;
+}
+
+.fact-value a,
+.timeline-content h3 a {
+    color: var(--text-secondary);
+    border-bottom: 1px solid transparent;
+}
+
+.fact-value a:hover,
+.timeline-content h3 a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
 }
 
 .bio-content h2 {

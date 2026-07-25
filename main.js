@@ -4,6 +4,52 @@
 
   document.documentElement.classList.add("js");
 
+  /* ----- Content deterrence (bypassable — not true security) ----- */
+  const shield = document.createElement("div");
+  shield.className = "shield-overlay";
+  shield.setAttribute("aria-hidden", "true");
+  document.documentElement.appendChild(shield);
+
+  let shieldTimer = 0;
+  const flashShield = (ms = 1600) => {
+    shield.classList.add("is-on");
+    window.clearTimeout(shieldTimer);
+    shieldTimer = window.setTimeout(() => shield.classList.remove("is-on"), ms);
+  };
+
+  document.addEventListener("contextmenu", (e) => e.preventDefault());
+  document.addEventListener("copy", (e) => e.preventDefault());
+  document.addEventListener("cut", (e) => e.preventDefault());
+  document.addEventListener("dragstart", (e) => {
+    if (
+      e.target &&
+      (e.target.closest("img") ||
+        e.target.closest(".photo-item") ||
+        e.target.closest(".hero-media") ||
+        e.target.closest(".bio-image") ||
+        e.target.closest(".work-visual"))
+    ) {
+      e.preventDefault();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    const key = e.key.toLowerCase();
+    const mod = e.ctrlKey || e.metaKey;
+
+    const block =
+      key === "f12" ||
+      e.key === "PrintScreen" ||
+      (mod && ["u", "s", "p", "c", "x", "a"].includes(key)) ||
+      (mod && e.shiftKey && ["i", "j", "c", "k"].includes(key));
+
+    if (!block) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.key === "PrintScreen") flashShield();
+  }, true);
+
   /* ----- Page enter ----- */
   window.requestAnimationFrame(() => {
     document.body.classList.add("is-ready");
