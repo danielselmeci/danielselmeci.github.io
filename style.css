@@ -156,30 +156,36 @@ strong {
 
 .section-header {
     margin-bottom: var(--space-lg);
+    max-width: 40rem;
 }
 
 .section-header.text-center {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-label {
     display: inline-block;
-    font-size: 0.75rem;
-    letter-spacing: 0.18em;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: var(--space-sm);
+    margin-bottom: 0.85rem;
 }
 
 .section-title {
     font-size: clamp(2rem, 4vw, 3.25rem);
     color: var(--text-primary);
-    margin-bottom: var(--space-sm);
+    margin-bottom: 0.85rem;
+    text-wrap: balance;
 }
 
 .section-description {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
     max-width: 34rem;
+    color: var(--text-secondary);
 }
 
 .section-header.text-center .section-description {
@@ -484,10 +490,11 @@ strong {
 }
 
 .hero-subtitle {
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
     color: var(--text-secondary);
-    max-width: 28rem;
+    max-width: 26rem;
     margin-bottom: var(--space-md);
+    letter-spacing: 0.01em;
     opacity: 0;
     animation: fadeUp 1s 0.28s var(--ease-slow) forwards;
 }
@@ -526,13 +533,15 @@ strong {
 }
 
 .lead {
-    font-size: clamp(1.25rem, 2.4vw, 1.65rem);
-    line-height: 1.75;
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+    line-height: 1.55;
     color: var(--text-secondary);
+    text-wrap: pretty;
 }
 
 .lead strong {
-    color: var(--accent);
+    color: var(--text-primary);
     font-weight: 500;
 }
 
@@ -942,13 +951,19 @@ strong {
 .bio-content h2 {
     color: var(--text-primary);
     margin-bottom: var(--space-md);
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
 }
 
 .bio-content p {
     font-size: 1.08rem;
     line-height: 1.85;
     margin-bottom: var(--space-md);
+    text-wrap: pretty;
+}
+
+.bio-content em {
+    color: var(--text-primary);
+    font-style: italic;
 }
 
 .expertise-list {
