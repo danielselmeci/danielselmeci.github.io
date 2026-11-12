@@ -29,42 +29,60 @@
       "@graph": [
         {
           "@type": "Person",
-          "@id": "https://danielselmeci.com/#person",
+          "@id": "https://danielselmeci.com",
           "name": "Daniel Selmeci",
           "url": "https://danielselmeci.com",
           "jobTitle": "Tech Entrepreneur and Photographer",
-          "image": "https://danielselmeci.com/images/daniel-selmeci-headshot.jpg",
+          "image": "https://danielselmeci.com",
           "description": "Daniel Selmeci is a tech entrepreneur, award-winning photographer, and founder of Polymath Sphere LLC and Go: TravelApp.",
+          "homeLocation": {
+            "@type": "Country",
+            "name": "United States of America",
+            "sameAs": "https://wikidata.org"
+          },
+          "knowsLanguage": ["en", "de", "hu"],
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Southern New Hampshire University",
+            "sameAs": "https://wikidata.org"
+          },
           "worksFor": {
-            "@id": "https://polymathsphere.com/#organization"
+            "@id": "https://polymathsphere.com"
           },
           "award": [
             "Shoot The Wild International Wild Photography Award Finalist",
             "Shoot The Frame featured photograph Castle in the forest"
           ],
           "sameAs": [
-            "https://instagram.com/daniel.selmeci",
-            "https://www.facebook.com/daniel.selmeci.images/",
-            "https://my.flightradar24.com/DanielSelmeci",
-            "https://linkedin.com/in/danielselmeci",
-            "https://crunchbase.com/person/daniel-selmeci",
-            "https://500px.com/p/danielselmeci"
+            "https://wikidata.org",
+            "https://crunchbase.com",
+            "https://linkedin.com",
+            "https://shoottheframe.com",
+            "https://500px.com",
+            "https://instagram.com",
+            "https://facebook.com",
+            "https://flightradar24.com"
           ]
         },
         {
           "@type": "Organization",
-          "@id": "https://polymathsphere.com/#organization",
+          "@id": "https://polymathsphere.com",
           "name": "Polymath Sphere LLC",
           "url": "https://polymathsphere.com",
+          "foundingLocation": {
+            "@type": "Place",
+            "name": "Rogers, Arkansas, United States"
+          },
           "founder": {
-            "@id": "https://danielselmeci.com/#person"
+            "@id": "https://danielselmeci.com"
           }
         },
         {
           "@type": "SoftwareApplication",
-          "@id": "https://danielselmeci.com/#go-travel-app",
+          "@id": "https://danielselmeci.com",
           "name": "Go: TravelApp",
           "url": "https://gotravelapp.com",
+          "downloadUrl": "https://apple.com",
           "applicationCategory": "TravelApplication",
           "operatingSystem": "iOS",
           "contentRating": "16+",
@@ -74,7 +92,7 @@
             "priceCurrency": "USD"
           },
           "creator": {
-            "@id": "https://danielselmeci.com/#person"
+            "@id": "https://danielselmeci.com"
           }
         }
       ]
