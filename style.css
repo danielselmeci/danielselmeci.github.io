@@ -1122,7 +1122,7 @@ strong {
 
 .award-badge {
     display: inline-block;
-    margin-right: 0.5rem;
+    margin: 0.15rem 0 0.55rem;
     padding: 0.2rem 0.65rem;
     border-radius: 999px;
     border: 1px solid rgba(196, 137, 106, 0.45);
@@ -1133,7 +1133,6 @@ strong {
     letter-spacing: 0.12em;
     line-height: 1.4;
     text-transform: uppercase;
-    vertical-align: 0.12em;
 }
 
 .award-badge--winner {
