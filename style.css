@@ -813,6 +813,10 @@ strong {
     gap: var(--space-md);
 }
 
+.award-grid--single {
+    grid-template-columns: 1fr;
+}
+
 .award-link {
     display: block;
     padding: var(--space-md) 0;
@@ -1114,6 +1118,28 @@ strong {
 
 .timeline-content p {
     margin-bottom: 0.65rem;
+}
+
+.award-badge {
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(196, 137, 106, 0.45);
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    vertical-align: 0.12em;
+}
+
+.award-badge--winner {
+    border-color: #d9b45a;
+    background: #d9b45a;
+    color: #1a1408;
 }
 
 .timeline-tag {
