@@ -28,44 +28,44 @@
       "@graph": [
         {
           "@type": "Person",
-          "@id": "https://danielselmeci.com",
+          "@id": "https://danielselmeci.com/#person",
           "name": "Daniel Selmeci",
-          "url": "https://danielselmeci.com",
+          "url": "https://danielselmeci.com/",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://danielselmeci.com/"
+          },
           "jobTitle": "Tech Entrepreneur and Photographer",
-          "image": "https://danielselmeci.com",
+          "image": "https://danielselmeci.com/images/daniel-selmeci-headshot.jpg",
           "description": "Daniel Selmeci is a tech entrepreneur, award-winning photographer, and founder of Polymath Sphere LLC and Go: TravelApp.",
           "homeLocation": {
             "@type": "Country",
-            "name": "United States of America",
-            "sameAs": "https://wikidata.org"
+            "name": "United States of America"
           },
           "knowsLanguage": ["en", "de", "hu"],
           "alumniOf": {
             "@type": "CollegeOrUniversity",
-            "name": "Southern New Hampshire University",
-            "sameAs": "https://wikidata.org"
+            "name": "Southern New Hampshire University"
           },
-          "worksFor": {
-            "@id": "https://polymathsphere.com"
+          "founder": {
+            "@id": "https://polymathsphere.com/#organization"
           },
           "award": [
             "Shoot The Wild International Wild Photography Award Finalist",
             "Shoot The Frame featured photograph Castle in the forest"
           ],
           "sameAs": [
-            "https://wikidata.org",
-            "https://crunchbase.com",
-            "https://linkedin.com",
-            "https://shoottheframe.com",
-            "https://500px.com",
-            "https://instagram.com",
-            "https://facebook.com",
-            "https://flightradar24.com"
+            "https://instagram.com/daniel.selmeci",
+            "https://500px.com/p/danielselmeci",
+            "https://linkedin.com/in/danielselmeci",
+            "https://www.facebook.com/daniel.selmeci.images/",
+            "https://my.flightradar24.com/DanielSelmeci",
+            "https://crunchbase.com/person/daniel-selmeci"
           ]
         },
         {
           "@type": "Organization",
-          "@id": "https://polymathsphere.com",
+          "@id": "https://polymathsphere.com/#organization",
           "name": "Polymath Sphere LLC",
           "url": "https://polymathsphere.com",
           "foundingLocation": {
@@ -73,25 +73,18 @@
             "name": "Rogers, Arkansas, United States"
           },
           "founder": {
-            "@id": "https://danielselmeci.com"
+            "@id": "https://danielselmeci.com/#person"
           }
         },
         {
           "@type": "SoftwareApplication",
-          "@id": "https://danielselmeci.com",
+          "@id": "https://gotravelapp.com/#software",
           "name": "Go: TravelApp",
           "url": "https://gotravelapp.com",
-          "downloadUrl": "https://apple.com",
           "applicationCategory": "TravelApplication",
           "operatingSystem": "iOS",
-          "contentRating": "16+",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-          },
           "creator": {
-            "@id": "https://danielselmeci.com"
+            "@id": "https://danielselmeci.com/#person"
           }
         }
       ]
@@ -100,7 +93,7 @@
 </head>
 <body>
     <nav class="nav">
-        <a href="index.html" class="nav-brand">
+        <a href="./" class="nav-brand">
             <img src="images/icon512x512.png" alt="" class="nav-logo" width="36" height="36">
             <span>Daniel Selmeci</span>
         </a>
@@ -110,8 +103,8 @@
             <span></span>
         </button>
         <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html" class="nav-link active">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="./" class="nav-link active">Home</a></li>
+            <li><a href="about/" class="nav-link">About</a></li>
             <li><a href="#work" class="nav-link">Work</a></li>
             <li><a href="#photography" class="nav-link">Photography</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -127,7 +120,7 @@
             </h1>
             <p class="hero-subtitle">Tech entrepreneur &amp; award-winning photographer</p>
             <div class="hero-cta">
-                <a href="about.html" class="btn btn-primary">My story</a>
+                <a href="about/" class="btn btn-primary">My story</a>
                 <a href="#work" class="btn btn-outline">See the work</a>
             </div>
         </div>
@@ -269,8 +262,8 @@
                     <p>Products for travelers. Photographs from the journey.</p>
                 </div>
                 <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
+                    <a href="./">Home</a>
+                    <a href="about/">About</a>
                     <a href="#work">Work</a>
                     <a href="#photography">Photography</a>
                     <a href="#contact">Contact</a>
