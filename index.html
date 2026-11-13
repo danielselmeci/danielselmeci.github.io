@@ -26,7 +26,7 @@
     <link rel="apple-touch-icon" href="images/icon512x512.png">
     <link rel="preload" href="fonts/dm-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="style.css?v=20261112b">
+    <link rel="stylesheet" href="style.css?v=20261112c">
     <link rel="canonical" href="https://danielselmeci.com">
 
     <script type="application/ld+json">
@@ -180,7 +180,10 @@
                         </p>
                         <a href="https://polymathsphere.com" class="text-link" target="_blank" rel="noopener">Visit Polymath Sphere →</a>
                     </div>
-                    <div class="work-visual tech" data-label="Studio"></div>
+                    <div class="work-visual tech work-visual--brand" data-label="Studio">
+                        <img src="images/polymath-sphere-mark.svg" alt="Polymath Sphere logo" width="88" height="88" loading="lazy" draggable="false">
+                        <span class="work-visual-name">Polymath Sphere</span>
+                    </div>
                 </article>
 
                 <article class="work-item work-item-reverse reveal">
@@ -194,7 +197,10 @@
                         <a href="https://gotravelapp.com" class="text-link" target="_blank" rel="noopener">Visit Go: TravelApp →</a>
                         <span class="work-meta">Travel · iOS · Ages 16+</span>
                     </div>
-                    <div class="work-visual travel" data-label="Product"></div>
+                    <div class="work-visual travel work-visual--screens" data-label="Product">
+                        <img src="images/go-travelapp-screen-1.webp" alt="Go: TravelApp App Store screen: The world won't wait" width="480" height="1040" loading="lazy" decoding="async" draggable="false">
+                        <img src="images/go-travelapp-screen-2.webp" alt="Go: TravelApp Cockpit screen with a Paris travel agenda" width="480" height="1040" loading="lazy" decoding="async" draggable="false">
+                    </div>
                 </article>
             </div>
         </div>
@@ -206,35 +212,39 @@
                 <span class="section-label">Photography</span>
                 <h2 class="section-title">Frames from a life in motion</h2>
                 <p class="section-description">
-                    Aerial, architecture, portrait, and landscape — shot with a Nikon D780 and DJI Mavic 2 Pro.
+                    Wildlife and landscape frames, each a Shoot The Frame finalist — shot with a Nikon D780 and DJI Mavic 2 Pro.
                 </p>
             </div>
 
             <div class="photo-grid reveal">
-                <div class="photo-item photo-item-tall aerial" data-image="images/aerial.jpg">
+                <a class="photo-item photo-item-tall" href="https://shoottheframe.com/the-archive/2024/wildlife/red-squirrel-by-daniel-selmeci/" target="_blank" rel="noopener">
+                    <img src="images/daniel-selmeci-red-squirrel-700.webp" alt="Red squirrel in Mannheim, photographed by Daniel Selmeci" width="700" height="874" loading="lazy" decoding="async" draggable="false">
                     <div class="photo-overlay">
-                        <h3>Aerial</h3>
-                        <p>Above the map</p>
+                        <h3>Red Squirrel</h3>
+                        <p>Wildlife · Finalist, Sep 2024</p>
                     </div>
-                </div>
-                <div class="photo-item architecture" data-image="images/architecture.jpg">
+                </a>
+                <a class="photo-item" href="https://shoottheframe.com/the-archive/2024/landscape/castle-in-the-forest-by-daniel-selmeci/" target="_blank" rel="noopener">
+                    <img src="images/daniel-selmeci-castle-in-the-forest-900.webp" alt="Castle in the forest, landscape photograph by Daniel Selmeci" width="900" height="599" loading="lazy" decoding="async" draggable="false">
                     <div class="photo-overlay">
-                        <h3>Architecture</h3>
-                        <p>Rome to New York</p>
+                        <h3>Castle in the forest</h3>
+                        <p>Landscape · Finalist, Sep 2024</p>
                     </div>
-                </div>
-                <div class="photo-item portrait" data-image="images/portrait.jpg">
+                </a>
+                <a class="photo-item" href="https://shoottheframe.com/the-archive/2024/landscape/green-lake-by-daniel-selmeci/" target="_blank" rel="noopener">
+                    <img src="images/daniel-selmeci-green-lake-1080.webp" alt="Green Lake with emerald-green water, landscape photograph by Daniel Selmeci" width="1080" height="719" loading="lazy" decoding="async" draggable="false">
                     <div class="photo-overlay">
-                        <h3>Portrait</h3>
-                        <p>People, light, place</p>
+                        <h3>Green Lake</h3>
+                        <p>Landscape · Finalist, Aug 2024</p>
                     </div>
-                </div>
-                <div class="photo-item photo-item-wide landscape" data-image="images/landscape.jpg">
+                </a>
+                <a class="photo-item photo-item-wide" href="https://shoottheframe.com/the-archive/2024/wildlife/rabbit-in-the-morning-sunshine-by-daniel-selmeci/" target="_blank" rel="noopener">
+                    <img src="images/daniel-selmeci-rabbit-in-the-morning-sunshine-1400.webp" alt="Rabbit in the morning sunshine, wildlife photograph by Daniel Selmeci" width="1400" height="788" loading="lazy" decoding="async" draggable="false">
                     <div class="photo-overlay">
-                        <h3>Landscape</h3>
-                        <p>Wild ground &amp; open sky</p>
+                        <h3>Rabbit in the morning sunshine</h3>
+                        <p>Wildlife · Finalist, Oct 2024</p>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="award-grid award-grid--single reveal">
@@ -287,11 +297,18 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Daniel Selmeci. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/daniel.selmeci" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://500px.com/p/danielselmeci" target="_blank" rel="noopener">500px</a>
+                    <a href="https://linkedin.com/in/danielselmeci" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://www.facebook.com/daniel.selmeci.images/" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://www.threads.com/@daniel.selmeci" target="_blank" rel="noopener">Threads</a>
+                </div>
+                <p>&copy; 2026 <a href="about/">Daniel Selmeci</a>. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="main.js?v=20261112b" defer></script>
+    <script src="main.js?v=20261112c" defer></script>
 </body>
 </html>

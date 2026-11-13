@@ -4,51 +4,12 @@
 
   document.documentElement.classList.add("js");
 
-  /* ----- Content deterrence (bypassable — not true security) ----- */
-  const shield = document.createElement("div");
-  shield.className = "shield-overlay";
-  shield.setAttribute("aria-hidden", "true");
-  document.documentElement.appendChild(shield);
-
-  let shieldTimer = 0;
-  const flashShield = (ms = 1600) => {
-    shield.classList.add("is-on");
-    window.clearTimeout(shieldTimer);
-    shieldTimer = window.setTimeout(() => shield.classList.remove("is-on"), ms);
-  };
-
-  document.addEventListener("contextmenu", (e) => e.preventDefault());
-  document.addEventListener("copy", (e) => e.preventDefault());
-  document.addEventListener("cut", (e) => e.preventDefault());
+  /* ----- Keep photos from being dragged out (light touch) ----- */
   document.addEventListener("dragstart", (e) => {
-    if (
-      e.target &&
-      (e.target.closest("img") ||
-        e.target.closest(".photo-item") ||
-        e.target.closest(".hero-media") ||
-        e.target.closest(".bio-image") ||
-        e.target.closest(".work-visual"))
-    ) {
+    if (e.target && e.target.closest && e.target.closest("img, .photo-item, .hero-media")) {
       e.preventDefault();
     }
   });
-
-  document.addEventListener("keydown", (e) => {
-    const key = e.key.toLowerCase();
-    const mod = e.ctrlKey || e.metaKey;
-
-    const block =
-      key === "f12" ||
-      e.key === "PrintScreen" ||
-      (mod && ["u", "s", "p", "c", "x", "a"].includes(key)) ||
-      (mod && e.shiftKey && ["i", "j", "c", "k"].includes(key));
-
-    if (!block) return;
-
-    e.preventDefault();
-    e.stopPropagation();
-    if (e.key === "PrintScreen") flashShield();
-  }, true);
 
   /* ----- Page enter ----- */
   window.requestAnimationFrame(() => {
@@ -147,12 +108,15 @@
   /* ----- Image hooks ----- */
   const heroMedia = document.getElementById("heroMedia");
   if (heroMedia) {
+    const heroSrc = window.innerWidth > 1100
+      ? "images/daniel-selmeci-green-lake-1920.webp"
+      : "images/daniel-selmeci-green-lake-1080.webp";
     const heroImage = new Image();
     heroImage.onload = () => {
-      heroMedia.style.setProperty("--hero-image", 'url("images/hero.jpg")');
+      heroMedia.style.setProperty("--hero-image", `url("${heroSrc}")`);
       heroMedia.classList.add("has-image");
     };
-    heroImage.src = "images/hero.jpg";
+    heroImage.src = heroSrc;
   }
 
   document.querySelectorAll(".photo-item[data-image]").forEach((item) => {
@@ -239,7 +203,7 @@
 
   /* ----- Magnetic buttons ----- */
   if (finePointer && !reduceMotion) {
-    document.querySelectorAll(".btn, .nav-logo").forEach((el) => {
+    document.querySelectorAll(".btn").forEach((el) => {
       el.classList.add("magnetic");
       el.addEventListener("pointermove", (e) => {
         const rect = el.getBoundingClientRect();
@@ -260,9 +224,9 @@
         const rect = card.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width;
         const y = (e.clientY - rect.top) / rect.height;
-        const rotY = (x - 0.5) * 30;
-        const rotX = (0.5 - y) * 30;
-        card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.05)`;
+        const rotY = (x - 0.5) * 6;
+        const rotX = (0.5 - y) * 6;
+        card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.015)`;
         card.style.setProperty("--spot-x", `${x * 100}%`);
         card.style.setProperty("--spot-y", `${y * 100}%`);
       });
@@ -311,20 +275,30 @@
     let rx = 0;
     let ry = 0;
 
+    let cursorRunning = false;
+
+    // Only animate while the ring is catching up; idle = no work.
     const moveCursor = () => {
       rx += (cx - rx) * 0.18;
       ry += (cy - ry) * 0.18;
       cursor.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
       ring.style.transform = `translate3d(${rx}px, ${ry}px, 0)`;
-      window.requestAnimationFrame(moveCursor);
+      if (Math.abs(cx - rx) > 0.3 || Math.abs(cy - ry) > 0.3) {
+        window.requestAnimationFrame(moveCursor);
+      } else {
+        cursorRunning = false;
+      }
     };
-    window.requestAnimationFrame(moveCursor);
 
     window.addEventListener(
       "pointermove",
       (e) => {
         cx = e.clientX;
         cy = e.clientY;
+        if (!cursorRunning) {
+          cursorRunning = true;
+          window.requestAnimationFrame(moveCursor);
+        }
       },
       { passive: true }
     );
