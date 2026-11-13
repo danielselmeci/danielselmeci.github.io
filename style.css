@@ -1344,6 +1344,170 @@ a.photo-item {
     color: var(--text-secondary);
 }
 
+/* ===== EXHIBITION MAP ===== */
+.exhibition-map-wrap {
+    max-width: var(--max);
+    margin: 0 auto var(--space-lg);
+    padding: 0 var(--space-md);
+}
+
+.exhibition-map {
+    position: relative;
+}
+
+.exhibition-map svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+@media (max-width: 640px) {
+    .exhibition-map-wrap {
+        padding: 0 0.5rem;
+    }
+}
+
+.map-land {
+    fill: none;
+    stroke: rgba(242, 235, 225, 0.2);
+    stroke-width: 0.8;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+}
+
+.map-marker {
+    cursor: pointer;
+    outline: none;
+}
+
+.map-marker .dot {
+    fill: var(--accent);
+}
+
+.map-marker .halo {
+    fill: var(--accent-soft);
+    stroke: rgba(196, 137, 106, 0.45);
+    stroke-width: 0.6;
+    opacity: 0.55;
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: opacity var(--ease), transform var(--ease);
+}
+
+.map-marker.is-upcoming .dot {
+    fill: #9fc2b9;
+}
+
+.map-marker.is-upcoming .halo {
+    fill: rgba(122, 158, 150, 0.16);
+    stroke: rgba(159, 194, 185, 0.5);
+}
+
+.map-marker.is-active .halo,
+.map-marker:focus-visible .halo {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.map-tooltip {
+    position: absolute;
+    z-index: 6;
+    width: max-content;
+    max-width: min(280px, 86vw);
+    padding: 0.85rem 1rem;
+    transform: translateX(-50%);
+    background: var(--bg-elevated);
+    border: 1px solid rgba(196, 137, 106, 0.35);
+    border-radius: 10px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    pointer-events: none;
+}
+
+.map-tooltip h4 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.map-tooltip-place {
+    margin: 0 0 0.55rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.map-tooltip ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.55rem;
+}
+
+.map-tooltip li {
+    display: grid;
+    gap: 0.05rem;
+    line-height: 1.35;
+}
+
+.map-tooltip-date {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.map-tooltip-date em {
+    font-style: normal;
+    color: #9fc2b9;
+}
+
+.map-tooltip-title {
+    font-size: 0.92rem;
+    color: var(--text-primary);
+}
+
+.map-tooltip-venue {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.map-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.5rem;
+    margin-top: var(--space-sm);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.map-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.legend-dot--upcoming {
+    background: #9fc2b9;
+}
+
+.map-hint {
+    text-transform: none;
+    letter-spacing: 0.02em;
+}
+
 .platform-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
