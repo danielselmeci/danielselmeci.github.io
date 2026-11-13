@@ -109,8 +109,8 @@
   const heroMedia = document.getElementById("heroMedia");
   if (heroMedia) {
     const heroSrc = window.innerWidth > 1100
-      ? "images/daniel-selmeci-green-lake-1920.webp"
-      : "images/daniel-selmeci-green-lake-1080.webp";
+      ? "images/daniel-selmeci-moss-and-mushrooms-1920.webp"
+      : "images/daniel-selmeci-moss-and-mushrooms-1080.webp";
     const heroImage = new Image();
     heroImage.onload = () => {
       heroMedia.style.setProperty("--hero-image", `url("${heroSrc}")`);

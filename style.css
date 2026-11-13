@@ -578,6 +578,7 @@ strong {
 }
 
 .hero-media.has-image {
+    background-position: 52% 30%;
     background-image:
         linear-gradient(180deg, rgba(15, 18, 16, 0.2) 0%, rgba(15, 18, 16, 0.78) 72%, var(--bg-primary) 100%),
         var(--hero-image);
