@@ -1284,6 +1284,16 @@ a.photo-item {
     text-transform: uppercase;
 }
 
+.award-badge--upcoming {
+    border-color: rgba(122, 158, 150, 0.55);
+    background: rgba(122, 158, 150, 0.16);
+    color: #9fc2b9;
+}
+
+.exhibition-info .award-badge {
+    margin: 0.2rem 0 0.35rem;
+}
+
 .award-badge--winner {
     border-color: #d9b45a;
     background: #d9b45a;

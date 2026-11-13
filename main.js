@@ -11,6 +11,14 @@
     }
   });
 
+  /* ----- Exhibitions: drop "Upcoming" once a show has ended ----- */
+  const todayIso = new Date().toISOString().slice(0, 10);
+  document.querySelectorAll(".exhibition-item[data-end]").forEach((item) => {
+    if (item.dataset.end < todayIso) {
+      item.querySelector(".award-badge--upcoming")?.remove();
+    }
+  });
+
   /* ----- Page enter ----- */
   window.requestAnimationFrame(() => {
     document.body.classList.add("is-ready");
