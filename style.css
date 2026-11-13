@@ -557,19 +557,12 @@ strong {
 
 .hero-media {
     position: absolute;
-    inset: -4%;
+    inset: 0;
     background:
         linear-gradient(180deg, rgba(15, 18, 16, 0.25) 0%, rgba(15, 18, 16, 0.82) 78%, var(--bg-primary) 100%),
         linear-gradient(135deg, #2a332e 0%, #1a1f1c 45%, #3a2f28 100%);
     background-size: cover;
     background-position: center;
-    animation: heroDrift 22s ease-in-out infinite alternate;
-    transform: scale(1.08);
-    will-change: transform;
-}
-
-.js .hero-media {
-    animation: none;
 }
 
 .hero-media::after {
@@ -588,11 +581,6 @@ strong {
     background-image:
         linear-gradient(180deg, rgba(15, 18, 16, 0.2) 0%, rgba(15, 18, 16, 0.78) 72%, var(--bg-primary) 100%),
         var(--hero-image);
-}
-
-@keyframes heroDrift {
-    from { transform: scale(1.06) translate3d(0, 0, 0); }
-    to { transform: scale(1.12) translate3d(-1.5%, -1%, 0); }
 }
 
 .hero-content {
@@ -812,23 +800,9 @@ strong {
     color: var(--text-primary);
 }
 
-.work-visual--screens {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.25rem;
-    padding: 2rem 1.5rem 2.75rem;
-}
-
-.work-visual--screens img {
-    width: auto;
-    height: clamp(220px, 28vw, 320px);
-    border-radius: 18px;
-    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.45);
-}
-
-.work-visual--screens img:nth-child(2) {
-    transform: translateY(1.25rem);
+.work-visual--brand img.app-icon {
+    border-radius: 22%;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
 }
 
 .work-visual.travel {
@@ -1006,6 +980,25 @@ a.photo-item {
     border-top: 1px solid var(--border);
 }
 
+.contact-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: var(--space-md);
+}
+
+.contact-email {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    border-bottom: 1px solid transparent;
+}
+
+.contact-email:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
 .social-row {
     display: flex;
     flex-wrap: wrap;
@@ -1084,27 +1077,9 @@ a.photo-item {
 }
 
 .footer-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem 2rem;
+    text-align: center;
 }
 
-.footer-social {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem 1.25rem;
-}
-
-.footer-social a {
-    font-size: 0.8rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--text-secondary);
-}
-
-.footer-social a:hover,
 .footer-bottom p a:hover {
     color: var(--accent);
 }

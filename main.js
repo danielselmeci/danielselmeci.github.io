@@ -155,52 +155,6 @@
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
-  /* ----- Hero parallax ----- */
-  const hero = document.querySelector(".hero");
-  if (hero && heroMedia && finePointer && !reduceMotion) {
-    let px = 0;
-    let py = 0;
-    let tx = 0;
-    let ty = 0;
-    let running = false;
-
-    const render = () => {
-      px += (tx - px) * 0.08;
-      py += (ty - py) * 0.08;
-      heroMedia.style.transform = `scale(1.08) translate3d(${px}px, ${py}px, 0)`;
-      if (Math.abs(tx - px) > 0.1 || Math.abs(ty - py) > 0.1) {
-        window.requestAnimationFrame(render);
-      } else {
-        running = false;
-      }
-    };
-
-    hero.addEventListener(
-      "pointermove",
-      (e) => {
-        const rect = hero.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        tx = x * -18;
-        ty = y * -12;
-        if (!running) {
-          running = true;
-          window.requestAnimationFrame(render);
-        }
-      },
-      { passive: true }
-    );
-
-    hero.addEventListener("pointerleave", () => {
-      tx = 0;
-      ty = 0;
-      if (!running) {
-        running = true;
-        window.requestAnimationFrame(render);
-      }
-    });
-  }
-
   /* ----- Magnetic buttons ----- */
   if (finePointer && !reduceMotion) {
     document.querySelectorAll(".btn").forEach((el) => {
