@@ -1316,6 +1316,19 @@ a.photo-item {
     border-top: 1px solid var(--border);
 }
 
+.exhibition-toggle {
+    display: block;
+    margin: var(--space-md) auto 0;
+    padding: 0.35rem 0;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.exhibition-toggle:hover {
+    color: var(--text-primary);
+}
+
 .exhibition-item {
     display: grid;
     grid-template-columns: 11rem 1fr;

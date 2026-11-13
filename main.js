@@ -19,6 +19,30 @@
     }
   });
 
+  /* ----- Exhibitions: show the five most recent first ----- */
+  const exhibitionList = document.getElementById("exhibitionList");
+  const exhibitionToggle = document.getElementById("exhibitionToggle");
+  if (exhibitionList && exhibitionToggle) {
+    const exhibitionItems = [...exhibitionList.querySelectorAll(".exhibition-item")];
+    const visibleCount = 5;
+
+    const setExhibitionsExpanded = (expanded) => {
+      exhibitionItems.forEach((item, index) => {
+        item.hidden = !expanded && index >= visibleCount;
+      });
+      exhibitionToggle.setAttribute("aria-expanded", String(expanded));
+      exhibitionToggle.innerHTML = expanded
+        ? 'Show less <span aria-hidden="true">↑</span>'
+        : 'See more <span aria-hidden="true">↓</span>';
+    };
+
+    setExhibitionsExpanded(false);
+    exhibitionToggle.addEventListener("click", () => {
+      const expanded = exhibitionToggle.getAttribute("aria-expanded") === "true";
+      setExhibitionsExpanded(!expanded);
+    });
+  }
+
   /* ----- Page enter ----- */
   window.requestAnimationFrame(() => {
     document.body.classList.add("is-ready");
