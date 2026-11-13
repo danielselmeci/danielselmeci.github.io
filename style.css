@@ -1329,6 +1329,10 @@ a.photo-item {
     color: var(--text-primary);
 }
 
+.exhibition-item[hidden] {
+    display: none;
+}
+
 .exhibition-item {
     display: grid;
     grid-template-columns: 11rem 1fr;
