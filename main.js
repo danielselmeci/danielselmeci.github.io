@@ -291,7 +291,7 @@
         const span = document.createElement("span");
         span.className = "char";
         span.textContent = char === " " ? "\u00A0" : char;
-        span.style.setProperty("--char-delay", `${i * 45}ms`);
+        span.style.setProperty("--char-delay", `${i * 30}ms`);
         line.appendChild(span);
       });
     });

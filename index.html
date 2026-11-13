@@ -24,10 +24,9 @@
     <title>Daniel Selmeci — Tech Entrepreneur & Photographer</title>
     <link rel="icon" type="image/png" href="images/icon512x512.png">
     <link rel="apple-touch-icon" href="images/icon512x512.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="fonts/dm-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css?v=20261112">
     <link rel="canonical" href="https://danielselmeci.com">
 
     <script type="application/ld+json">
@@ -214,25 +213,25 @@
             <div class="photo-grid reveal">
                 <div class="photo-item photo-item-tall aerial" data-image="images/aerial.jpg">
                     <div class="photo-overlay">
-                        <h4>Aerial</h4>
+                        <h3>Aerial</h3>
                         <p>Above the map</p>
                     </div>
                 </div>
                 <div class="photo-item architecture" data-image="images/architecture.jpg">
                     <div class="photo-overlay">
-                        <h4>Architecture</h4>
+                        <h3>Architecture</h3>
                         <p>Rome to New York</p>
                     </div>
                 </div>
                 <div class="photo-item portrait" data-image="images/portrait.jpg">
                     <div class="photo-overlay">
-                        <h4>Portrait</h4>
+                        <h3>Portrait</h3>
                         <p>People, light, place</p>
                     </div>
                 </div>
                 <div class="photo-item photo-item-wide landscape" data-image="images/landscape.jpg">
                     <div class="photo-overlay">
-                        <h4>Landscape</h4>
+                        <h3>Landscape</h3>
                         <p>Wild ground &amp; open sky</p>
                     </div>
                 </div>
@@ -293,6 +292,6 @@
         </div>
     </footer>
 
-    <script src="main.js" defer></script>
+    <script src="main.js?v=20261112" defer></script>
 </body>
 </html>

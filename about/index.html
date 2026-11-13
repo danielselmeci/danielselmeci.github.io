@@ -24,10 +24,10 @@
     <title>About — Daniel Selmeci</title>
     <link rel="icon" type="image/png" href="../images/icon512x512.png">
     <link rel="apple-touch-icon" href="../images/icon512x512.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="preload" href="../fonts/dm-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../images/daniel-selmeci-headshot-720.webp" as="image" type="image/webp" fetchpriority="high">
+    <link rel="stylesheet" href="../style.css?v=20261112">
     <link rel="canonical" href="https://danielselmeci.com/about/">
 
     <!-- Structured data describing Daniel Selmeci and related projects -->
@@ -146,13 +146,13 @@
     <section class="section biography-section">
         <div class="container">
             <div class="bio-layout">
-                <aside class="bio-sidebar reveal">
-                    <div class="bio-image" id="bioImage" style="background-image: url('../images/daniel-selmeci-headshot.jpg')">
-                        <span>Headshot</span>
+                <aside class="bio-sidebar">
+                    <div class="bio-image has-image" id="bioImage">
+                        <img src="../images/daniel-selmeci-headshot-720.webp" width="720" height="1082" alt="Daniel Selmeci, tech entrepreneur and photographer" fetchpriority="high" decoding="async" draggable="false">
                     </div>
 
                     <div class="bio-quick-facts">
-                        <h3>At a glance</h3>
+                        <h2>At a glance</h2>
                         <ul class="fact-list">
                             <li>
                                 <span class="fact-label">Role</span>
@@ -354,6 +354,6 @@
         </div>
     </footer>
 
-    <script src="../main.js" defer></script>
+    <script src="../main.js?v=20261112" defer></script>
 </body>
 </html>
