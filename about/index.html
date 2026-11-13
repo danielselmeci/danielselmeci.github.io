@@ -360,7 +360,7 @@
         </div>
 
         <div class="container-narrow">
-            <ul class="exhibition-list reveal">
+            <ul class="exhibition-list reveal" id="exhibitionList">
                 <li class="exhibition-item" data-city="Santa Cruz, CA, USA" data-lat="36.974" data-lon="-122.031" data-end="2027-03-07">
                     <time class="exhibition-date" datetime="2027-03-05">5–7 Mar 2027</time>
                     <div class="exhibition-info">
@@ -505,6 +505,9 @@
                     </div>
                 </li>
             </ul>
+            <button class="exhibition-toggle text-link" id="exhibitionToggle" type="button" aria-expanded="false" aria-controls="exhibitionList">
+                See more <span aria-hidden="true">↓</span>
+            </button>
         </div>
     </section>
 
