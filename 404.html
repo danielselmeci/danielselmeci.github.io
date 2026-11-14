@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#0f1210">
+    <title>Page not found — Daniel Selmeci</title>
+    <link rel="icon" type="image/png" href="/images/icon512x512.png">
+    <link rel="apple-touch-icon" href="/images/icon512x512.png">
+    <link rel="preload" href="/fonts/dm-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/style.css?v=20261114a">
+    <style>
+        .notfound {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 7rem 0 4rem;
+        }
+
+        .notfound-media {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(180deg, rgba(15, 18, 16, 0.55) 0%, rgba(15, 18, 16, 0.86) 70%, var(--bg-primary) 100%),
+                url("/images/daniel-selmeci-moss-and-mushrooms-1080.webp");
+            background-size: cover;
+            background-position: 52% 30%;
+        }
+
+        @media (min-width: 1100px) {
+            .notfound-media {
+                background-image:
+                    linear-gradient(180deg, rgba(15, 18, 16, 0.55) 0%, rgba(15, 18, 16, 0.86) 70%, var(--bg-primary) 100%),
+                    url("/images/daniel-selmeci-moss-and-mushrooms-1920.webp");
+            }
+        }
+
+        .notfound-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        .notfound-code {
+            display: block;
+            font-family: var(--font-display);
+            font-size: clamp(4.5rem, 16vw, 9rem);
+            line-height: 1;
+            color: var(--accent);
+            margin-bottom: var(--space-sm);
+        }
+
+        .notfound h1 {
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            margin-bottom: var(--space-sm);
+            max-width: 16ch;
+        }
+
+        .notfound p {
+            max-width: 30rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+        }
+
+        .notfound-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .notfound-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.5rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .notfound-links a {
+            color: var(--text-secondary);
+        }
+
+        .notfound-links a:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="/" class="nav-brand">
+            <img src="/images/icon512x512.png" alt="" class="nav-logo" width="36" height="36">
+            <span>Daniel Selmeci</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/about/" class="nav-link">About</a></li>
+            <li><a href="/#work" class="nav-link">Work</a></li>
+            <li><a href="/#photography" class="nav-link">Photography</a></li>
+            <li><a href="/#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="notfound">
+        <div class="notfound-media" aria-hidden="true"></div>
+        <div class="notfound-content">
+            <span class="notfound-code" aria-hidden="true">404</span>
+            <h1>This page wandered off the map.</h1>
+            <p>The link may be old or mistyped. Everything else is still here: the ventures, the photographs, and the exhibitions.</p>
+            <div class="notfound-actions">
+                <a href="/" class="btn btn-primary">Back home</a>
+                <a href="/about/" class="btn btn-outline">About Daniel</a>
+            </div>
+            <div class="notfound-links">
+                <a href="/#work">Ventures</a>
+                <a href="/#photography">Photography</a>
+                <a href="/about/#exhibitions">Exhibitions</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 <a href="/about/">Daniel Selmeci</a>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/main.js?v=20261114a" defer></script>
+</body>
+</html>
