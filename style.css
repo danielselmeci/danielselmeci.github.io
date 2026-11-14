@@ -732,6 +732,10 @@ strong {
     margin-bottom: var(--space-sm);
 }
 
+.work-title + .award-badge {
+    margin: -0.35rem 0 var(--space-sm);
+}
+
 .work-description {
     margin-bottom: var(--space-md);
     max-width: 36rem;
